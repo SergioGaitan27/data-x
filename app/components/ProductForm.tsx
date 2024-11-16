@@ -342,7 +342,7 @@ const ProductForm: React.FC = () => {
         <Button size="md" color="primary" type="submit">
           Registrar producto
         </Button>
-        <Button size="md" color="danger" type="button" onClick={() => reset()}>
+        <Button size="md" color="success" type="button" onClick={() => reset()}>
           Limpiar
         </Button>
       </div>

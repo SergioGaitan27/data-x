@@ -5,6 +5,10 @@ export default function CreateProductPage() {
     <div className="flex flex-col items-center ">
         <head>
             <title>RMAZH | Nuevo producto</title>
+            <meta 
+              name="viewport" 
+              content="width=device-width, initial-scale=1, maximum-scale=1"
+            />
         </head>
         <body className='flex flex-col'>
             <h1 className="text-center text-xl p-4">Nuevo producto</h1>
