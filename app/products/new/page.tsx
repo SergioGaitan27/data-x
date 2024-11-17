@@ -1,8 +1,11 @@
+"use client";
+
 import ProductForm from '@/app/components/ProductForm';
+import {Breadcrumbs, BreadcrumbItem} from "@nextui-org/react";
 
 export default function CreateProductPage() {
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center">
         <head>
             <title>RMAZH | Nuevo producto</title>
             <meta 
@@ -11,7 +14,12 @@ export default function CreateProductPage() {
             />
         </head>
         <body className='flex flex-col'>
-            <h1 className="text-center text-xl p-4">Nuevo producto</h1>
+            <Breadcrumbs className="p-4">
+              <BreadcrumbItem href="/categories">Categorias</BreadcrumbItem>
+              <BreadcrumbItem href="/products">Productos</BreadcrumbItem>
+              <BreadcrumbItem href="/products/new">Nuevo producto</BreadcrumbItem>
+            </Breadcrumbs>
+            <h1 className="text-center text-large">Nuevo producto</h1>
             <ProductForm />
         </body>
         <footer className='flex align-bottom justify-center p-4'>

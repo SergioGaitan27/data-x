@@ -19,4 +19,5 @@ const ProductSchema: Schema = new Schema({
 ProductSchema.index({ boxCode: 1 });
 ProductSchema.index({ productCode: 1 });
 const Product = mongoose.models.Product || mongoose.model<IProduct>('Product', ProductSchema);
+
 export default Product;
