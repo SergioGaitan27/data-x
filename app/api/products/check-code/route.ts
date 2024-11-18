@@ -1,6 +1,6 @@
 // app/api/products/check-code/route.ts
 import { NextResponse } from "next/server";
-import connectDB from "@/app/lib/db/mongodb";
+import dbConnect from "@/app/lib/db/mongodb";
 import Product from "@/models/product";
 
 export async function GET(req: Request) {
@@ -16,7 +16,7 @@ export async function GET(req: Request) {
       );
     }
 
-    await connectDB();
+    await dbConnect();
 
     const query = type === 'box' 
       ? { boxCode: code.toUpperCase() }

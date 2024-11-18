@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import  connectDB  from "@/app/lib/db/mongodb";
+import  dbConnect  from "@/app/lib/db/mongodb";
 import  Product from "@/models/product";
 
 export async function POST(req: Request) {
     try {
-      await connectDB();
+      await dbConnect();
       
       const product = await req.json();
       const newProduct = await Product.create(product);
